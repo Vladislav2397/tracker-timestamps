@@ -22,7 +22,6 @@ class TimestampTracker {
         </div>
         
         <div class="timestamps-list">
-          <h3>Записи времени</h3>
           <ul id="timestamps-list"></ul>
         </div>
         
