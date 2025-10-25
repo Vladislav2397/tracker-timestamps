@@ -82,6 +82,159 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Стили для трекера времени */
+.tracker-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.tracker-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.tracker-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #646cff;
+}
+
+.timestamps-list {
+  flex: 1;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.tracker-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #646cff;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.tracker-button:hover {
+  background-color: #646cff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+}
+
+.tracker-button.urgent {
+  border-color: #ff6b6b;
+  background-color: #1a1a1a;
+}
+
+.tracker-button.urgent:hover {
+  background-color: #ff6b6b;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+
+.timestamps-list h3 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.timestamps-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timestamp-item {
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #646cff;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timestamp-item.urgent {
+  border-left-color: #ff6b6b;
+  background-color: #3a2a2a;
+}
+
+.timestamp-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.timestamp-content {
+  flex: 1;
+}
+
+.timestamp-time {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.timestamp-suffix {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.timestamp-suffix.urgent {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.timestamp-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-button {
+  background-color: #ff4757;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff3742;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 2rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -92,5 +245,54 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  
+  .tracker-button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  
+  .tracker-button:hover {
+    background-color: #646cff;
+    color: #ffffff;
+  }
+  
+  .tracker-button.urgent {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  
+  .tracker-button.urgent:hover {
+    background-color: #ff6b6b;
+    color: #ffffff;
+  }
+  
+  .timestamps-list {
+    background-color: #f5f5f5;
+  }
+  
+  .timestamps-list h3 {
+    color: #213547;
+  }
+  
+  .timestamp-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .timestamp-item.urgent {
+    background-color: #fff5f5;
+  }
+  
+  .timestamp-time {
+    color: #213547;
+  }
+  
+  .timestamp-suffix {
+    color: #666;
+  }
+  
+  .timestamp-suffix.urgent {
+    color: #ff6b6b;
   }
 }
