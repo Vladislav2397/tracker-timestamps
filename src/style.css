@@ -25,7 +25,9 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100svh;
 }
@@ -36,10 +38,17 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 450px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100svh;
+  box-sizing: border-box;
+
 }
 
 .logo {
@@ -124,6 +133,7 @@ button:focus-visible {
 }
 
 .tracker-button {
+    flex: 1;
   padding: 0.8rem 1.5rem;
   font-size: 1.1rem;
   border-radius: 8px;
@@ -191,10 +201,13 @@ button:focus-visible {
 }
 
 .timestamp-time {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 0.3rem;
+
+  @media (min-width: 375px) {
+    font-size: 1rem;
+  }
 }
 
 .timestamp-suffix {
@@ -246,52 +259,52 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-  
+
   .tracker-button {
     background-color: #f9f9f9;
     color: #213547;
   }
-  
+
   .tracker-button:hover {
     background-color: #646cff;
     color: #ffffff;
   }
-  
+
   .tracker-button.urgent {
     background-color: #f9f9f9;
     color: #213547;
   }
-  
+
   .tracker-button.urgent:hover {
     background-color: #ff6b6b;
     color: #ffffff;
   }
-  
+
   .timestamps-list {
     background-color: #f5f5f5;
   }
-  
+
   .timestamps-list h3 {
     color: #213547;
   }
-  
+
   .timestamp-item {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
   }
-  
+
   .timestamp-item.urgent {
     background-color: #fff5f5;
   }
-  
+
   .timestamp-time {
     color: #213547;
   }
-  
+
   .timestamp-suffix {
     color: #666;
   }
-  
+
   .timestamp-suffix.urgent {
     color: #ff6b6b;
   }

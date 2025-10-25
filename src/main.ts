@@ -17,7 +17,6 @@ class TimestampTracker {
 
   private initializeUI() {
     document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-      <div class="tracker-container">
         <div class="tracker-header">
           <h1 class="tracker-title">Трекер Времени</h1>
         </div>
@@ -29,13 +28,12 @@ class TimestampTracker {
         
         <div class="buttons-container">
           <button id="add-timestamp" class="tracker-button" type="button">
-            Добавить время
+            Время
           </button>
           <button id="add-urgent-timestamp" class="tracker-button urgent" type="button">
-            Добавить время!
+            Время !!!
           </button>
         </div>
-      </div>
     `;
 
     this.timestampsList = document.querySelector<HTMLUListElement>('#timestamps-list')!;
