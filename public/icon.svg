@@ -1,0 +1,46 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <!-- Фон -->
+    <rect width="512" height="512" rx="64" fill="#242424" />
+
+    <!-- Внешний круг часов -->
+    <circle cx="256" cy="256" r="200" fill="none" stroke="#646cff" stroke-width="8" />
+
+    <!-- Внутренний круг -->
+    <circle cx="256" cy="256" r="160" fill="none" stroke="#646cff" stroke-width="4" opacity="0.6" />
+
+    <!-- Стрелки часов -->
+    <!-- Часовая стрелка -->
+    <line x1="256" y1="256" x2="256" y2="180" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Минутная стрелка -->
+    <line x1="256" y1="256" x2="256" y2="140" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Секундная стрелка -->
+    <line x1="256" y1="256" x2="256" y2="120" stroke="#ff6b6b" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Центр часов -->
+    <circle cx="256" cy="256" r="16" fill="#ffffff" />
+
+    <!-- Цифры на часах -->
+    <text x="256" y="80" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32"
+        font-weight="bold">12</text>
+    <text x="400" y="270" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32"
+        font-weight="bold">3</text>
+    <text x="256" y="440" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32"
+        font-weight="bold">6</text>
+    <text x="112" y="270" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="32"
+        font-weight="bold">9</text>
+
+    <!-- Дополнительные метки -->
+    <circle cx="256" cy="80" r="4" fill="#646cff" />
+    <circle cx="400" cy="256" r="4" fill="#646cff" />
+    <circle cx="256" cy="432" r="4" fill="#646cff" />
+    <circle cx="112" cy="256" r="4" fill="#646cff" />
+
+    <!-- Плюс в углу (символ добавления) -->
+    <g transform="translate(380, 100)">
+        <circle cx="0" cy="0" r="24" fill="#646cff" />
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+        <line x1="0" y1="-12" x2="0" y2="12" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+    </g>
+</svg>

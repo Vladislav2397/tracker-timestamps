@@ -140,3 +140,40 @@ class TimestampTracker {
 
 // Инициализация приложения
 new TimestampTracker();
+
+// Регистрация Service Worker для PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('/tracker-timestamps/sw.js');
+      console.log('Service Worker зарегистрирован:', registration);
+      
+      // Проверка обновлений
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // Новое обновление доступно
+              if (confirm('Доступно обновление приложения. Перезагрузить страницу?')) {
+                window.location.reload();
+              }
+            }
+          });
+        }
+      });
+      
+    } catch (error) {
+      console.error('Ошибка регистрации Service Worker:', error);
+    }
+  });
+  
+  // Обработка сообщений от Service Worker
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'SW_UPDATE_AVAILABLE') {
+      if (confirm('Доступно обновление приложения. Перезагрузить страницу?')) {
+        window.location.reload();
+      }
+    }
+  });
+}

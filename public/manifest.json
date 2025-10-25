@@ -1,0 +1,87 @@
+{
+  "name": "Timestamp Tracker",
+  "short_name": "TimeTracker",
+  "description": "Приложение для отслеживания штампов времени с локальным хранением данных",
+  "start_url": "/tracker-timestamps/",
+  "display": "standalone",
+  "background_color": "#242424",
+  "theme_color": "#646cff",
+  "orientation": "portrait-primary",
+  "scope": "/tracker-timestamps/",
+  "lang": "ru",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/tracker-timestamps/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/tracker-timestamps/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/tracker-timestamps/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/tracker-timestamps/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/tracker-timestamps/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/tracker-timestamps/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Добавить время",
+      "short_name": "Добавить",
+      "description": "Быстро добавить новую запись времени",
+      "url": "/tracker-timestamps/?action=add",
+      "icons": [
+        {
+          "src": "/tracker-timestamps/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Добавить срочное время",
+      "short_name": "Срочно",
+      "description": "Добавить срочную запись времени",
+      "url": "/tracker-timestamps/?action=urgent",
+      "icons": [
+        {
+          "src": "/tracker-timestamps/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/tracker-timestamps/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/tracker-timestamps/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
